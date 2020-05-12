@@ -44,7 +44,7 @@ With the ```hashtags.txt``` file saved, run the program using the following comm
 python ight-scrapr.py
 ```
 
-This will start the program, scraping and analyzing each given hashtag's posts from Instagram's website (this may take a while depending on how many hashtags were given). If there are no posts for a hashtag (or there is an error retrieving data for it), it will be told. If not, the number of top and recent posts looked at will be told for each hashtag.
+This will start the program, scraping and analyzing each given hashtag's posts from Instagram's website (this may take a while depending on how many hashtags were given). If there are no posts for a hashtag (or there is an error retrieving data for it), it will be told. If not, the number of top and recent posts looked at will be told for each hashtag. The program will go through a maximum of 100 recent posts.
 
 When completed, two files will be created: ```output.csv``` and ```output.json```. Both files will contain the following data formatted as CSV and JSON, respectively:
 
