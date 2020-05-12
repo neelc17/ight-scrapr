@@ -12,10 +12,9 @@ print("Creating output CSV file (output.csv)...")
 outputFile = open("output.csv", mode="w")
 outputFile.write("Hashtag,# of Posts,Min Top Post Likes,Mean Top Post Likes\n")
 
-print("Scraping/analyzing data of top posts from the following hashtags:")
 for hashtag in inputList:
     if hashtag != "":
-        print(hashtag)
+        print("Scraping/analyzing posts for " + hashtag + "...")
         URL = "https://www.instagram.com/explore/tags/" + hashtag[1:]
         page = requests.get(URL)
 
