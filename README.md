@@ -1,5 +1,5 @@
 # IGHT Scrapr
-A Python application that gives basic analytics for Instagram hashtags. 
+A Python application that gives basic analytics for Instagram hashtags.
 
 ## Getting Started
 
@@ -44,6 +44,15 @@ With the ```hashtags.txt``` file saved, run the program using the following comm
 python ight-scrapr.py
 ```
 
-This will start the program, scraping and analyzing each given hashtag's posts from Instagram's website (this may take a while depending on how many hashtags were given).
+This will start the program, scraping and analyzing each given hashtag's posts from Instagram's website (this may take a while depending on how many hashtags were given). If there are no posts for a hashtag (or there is an error retrieving data for it), it will be told. If not, the number of top and recent posts looked at will be told for each hashtag.
 
-When completed, two files will be created: ```output.csv``` and ```output.json```. Both files will contain the total number of posts and the mean and minimum number of likes for the top posts for each hashtag, formatted as CSV and JSON, respectively.
+When completed, two files will be created: ```output.csv``` and ```output.json```. Both files will contain the following data formatted as CSV and JSON, respectively:
+
+* Hashtag Name
+* Total # of Posts
+* Top Posts
+    * Minimum # of Likes
+    * Mean # of Likes
+* Recent Posts
+    * Median Time Between Posts (s)
+    * % of Posts that Are Videos
