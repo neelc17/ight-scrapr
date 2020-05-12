@@ -48,11 +48,11 @@ This will start the program, scraping and analyzing each given hashtag's posts f
 
 When completed, two files will be created: ```output.csv``` and ```output.json```. Both files will contain the following data formatted as CSV and JSON, respectively:
 
-* *Hashtag Name*
-* *Total # of Posts*
+* **Hashtag Name**
+* **Total # of Posts**
 * Top Posts
-    * *Minimum # of Likes*
-    * *Mean # of Likes*
+    * **Minimum # of Likes**
+    * **Mean # of Likes**
 * Recent Posts
-    * *Median Time Between Posts (s)*
-    * *% of Posts that are Videos*
+    * **Median Time Between Posts (s)**
+    * **% of Posts that are Videos**
