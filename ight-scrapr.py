@@ -2,7 +2,7 @@ import requests
 import json
 import pandas as pd
 
-print("Reading hashtag list from hashtags.txt...")
+print("Reading hashtag list from input file (hashtags.txt)...")
 inputFile = open("hashtags.txt", mode="r")
 input = inputFile.read()
 inputFile.close()
