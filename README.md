@@ -23,7 +23,7 @@ pip install -r requirements.txt
 
 The application is in a very basic state right now, and can be run as a simple CLI Python program.
 
-### Creating Input File
+### Creating an Input File
 
 The application works by reading from an input file that contains the list of hashtags to be analyzed. Create a file called ```hashtags.txt``` in the project directory. Type in the hashtags you wish to analyze, separated by newlines as such:
 
