@@ -1,37 +1,58 @@
-## Welcome to GitHub Pages
+# IGHT Scrapr
+A Python application that gives basic analytics for Instagram hashtags.
 
-You can use the [editor on GitHub](https://github.com/neelc17/ight-scrapr/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+## Getting Started
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Clone a Copy
 
-### Markdown
+Clone a copy of this project with the following command:
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```
+git clone https://github.com/neelc17/ight-scrapr.git
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+### Installing Dependencies
 
-### Jekyll Themes
+Before running the project, install the dependences with the following command:
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/neelc17/ight-scrapr/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+```
+pip install -r requirements.txt
+```
 
-### Support or Contact
+## Running the Program
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+The application is in a very basic state right now, and can be run as a simple CLI Python program.
+
+### Creating an Input File
+
+The application works by reading from an input file that contains the list of hashtags to be analyzed. Create a file called ```hashtags.txt``` in the project directory. Type in the hashtags you wish to analyze, separated by newlines as such:
+
+```
+#wildlifephotography
+#wildlifepics
+#videography
+#filmmaking
+#yankeewithnobrim
+...
+```
+
+### Starting the Program
+
+With the ```hashtags.txt``` file saved, run the program using the following command:
+
+```
+python ight-scrapr.py
+```
+
+This will start the program, scraping and analyzing each given hashtag's posts from Instagram's website (this may take a while depending on how many hashtags were given). If there are no posts for a hashtag (or there is an error retrieving data for it), it will be told. If not, the number of top and recent posts looked at will be told for each hashtag. The program will go through a maximum of 100 recent posts.
+
+When completed, two files will be created: ```output.csv``` and ```output.json```. Both files will contain the following data formatted as CSV and JSON, respectively:
+
+* **Hashtag Name**
+* **Total # of Posts**
+* Top Posts
+    * **Minimum # of Likes**
+    * **Mean # of Likes**
+* Recent Posts
+    * **Median Time Between Posts (s)**
+    * **% of Posts that are Videos**
